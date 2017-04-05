@@ -9,6 +9,11 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).This applicatio
 
 ## Starting a new app 
 ionic start app tabs --v2
+ionic serve 
+ionic build --release --prod 
+ionic build ios --release --prod 
+ionic build android --release --prod 
+ionic run android 
 
 # Server Operations
 ## Running Locally

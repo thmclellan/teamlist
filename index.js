@@ -10,22 +10,15 @@ var path = require('path'),
 var app = express();
 app.set('port', (process.env.PORT || 3000));
 
-// just do static file serving for now from ./app/www folder if it exists or ./public
-var appStaticPath = path.join(__dirname, 'app/www'); // preferred path
-var staticPath = path.join(__dirname, 'public'); // backup path
+// just do static file serving for now  
+var staticPath = path.join(__dirname, 'public'); // public path
+var staticPath = path.join(__dirname, 'app/www'); // alternate path
+app.use(express.static(staticPath));
 
-if (fs.existsSync(appStaticPath)) {
-    staticPath = appStaticPath;
-    console.log("serving from app/www");
-} else { 
-    console.log("The folder " + appStaticPath + " does not exist, using " + staticPath + " instead");
-}
-console.log("\nappStaticPath:" + appStaticPath);
-console.log("\nstaticPath:" + staticPath);
+
 app.use(cors());
 // This is required to avoid permission issues with cross domain function calls
 
-app.use(express.static(staticPath));
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(morganLogger('dev'));
