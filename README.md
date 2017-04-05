@@ -1,4 +1,5 @@
-# Teamlist Demo App for Web, iPhone, Android users (Ionic 2, Node.js, Heroku) 
+# Teamlist Demo App 
+## For Web, iPhone, Android users (Ionic 2, Node.js, Heroku) 
 This is a basic Ionic 2 and Node.js Heroku Starter application for demonstration of how to build and run an Ionic 2 app for web, iOS, and Android users at the Ionic Vancouver meetup in April 2017.  This repo includes Node.js server components and Ionic 2 app components. 
 
 
