@@ -58,6 +58,7 @@ $ ionic platforms add ios
 $ ionic run ios 
 ```
 - If 'adb devices' does not show attached Android phone, then 'adb kill-server' and 'adb devices' can be used to restart adb.  
+- 'ionic run ios' requires ios-deploy. Manual deployment can be done with 'ionic build ios' and opening the project in Xcode.
 
 ## Running the Ionic App  
 ```sh
