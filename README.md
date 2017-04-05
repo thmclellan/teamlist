@@ -6,6 +6,50 @@ This is a basic Ionic 2 and Node.js Heroku Starter application for demonstration
 
 This app was started off using the Ionic 2.3 tabs starter. The repo layout includes both the server and client app components in a single repo for demo purposes. The top-level folder includes Node.js server components, and Ionic app components are contained in /ionic.  
 
+## Step-by-Step Instructions
+
+### Setup Heroku App  
+```sh
+$ git clone https://github.com/thmclellan/teamlist
+$ cd teamlist 
+$ npm install 
+$ heroku create 
+```
+- Take note of the new server name e.g. https://NAME.herokuapp.com 
+
+### Build Ionic App for new Heroku server 
+```sh
+$ cd ionic
+$ npm install 
+```
+- Update the serverURL on line 15 of ionic/src/services/task/task.service.ts 
+  serverURL: any = 'https://lit-cove-42863.herokuapp.com';
+
+- Rebuild the app 
+```sh
+$ ionic build --release --prod 
+```
+- Copy the newly built app from /ionic/www to /www 
+```sh
+$ cd .. 
+cp -rf ionic/www ./
+```
+
+### Deploy to Heroku 
+```sh
+$ git push heroku master 
+```
+
+### Test the app 
+```sh
+$ heroku open 
+$ cd ionic 
+$ ionic platforms add android 
+$ ionic run android
+$ ionic platforms add ios
+$ ionic run ios 
+```
+
 ## Running the Ionic App  
 ```sh
 $ cd ionic
@@ -13,26 +57,10 @@ $ npm install
 $ ionic serve 
 ```
 
-## Building on iOS and Android 
-```sh
-$ ionic build ios  
-$ ionic run android 
-$ ionic build ios --release --prod 
-$ ionic build android --release --prod 
-```
-
-## Building for Web delivery 
-```sh
-$ ionic build --release --prod 
-```
-- Copy the ./ionic/www folder to ./www for delivery through Heroku 
-- Test with Chrome Incognito to avoid caching 
-
-
 ## Try the Demo 
 Visit https://teamlistchat.herokuapp.com
 
-# Server Operations
+# Heroku Node.js Server Operations
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
