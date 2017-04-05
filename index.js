@@ -17,13 +17,15 @@ var staticPath = path.join(__dirname, 'public'); // backup path
 if (fs.existsSync(appStaticPath)) {
     staticPath = appStaticPath;
     console.log("serving from app/www");
+} else { 
+    console.log("The folder " + appStaticPath + " does not exist, using " + staticPath + " instead");
 }
 console.log("\nappStaticPath:" + appStaticPath);
 console.log("\nstaticPath:" + staticPath);
 app.use(cors());
 // This is required to avoid permission issues with cross domain function calls
 
-app.use(express.static(appStaticPath));
+app.use(express.static(staticPath));
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(morganLogger('dev'));
