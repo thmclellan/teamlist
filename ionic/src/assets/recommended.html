@@ -1,0 +1,74 @@
+<html><head>
+    <title>Welcome</title>
+    
+    
+    </head>
+
+
+<body style="font-family:arial; color:#555555; font-size:1.15em;">
+    <p align="center" style="margin-top:25px;">
+        <!--<img src="logo.png" style="width:300px;"/>-->
+        </p>
+    
+    <p align="center" style="padding-top:10px; line-height:150%; width:80%;margin: 0 auto; ">We recommend Google Chrome or Safari Web Browser for the best experience with our application.</p>
+    
+        <table style="border:1px;" align="center">
+            <tr style="padding-top:10px;">
+                <td style="margin-right:20px;padding-top:20px;"><a href="https://www.google.com/chrome/browser/desktop/" target="_blank" style="text-decoration:none;"><img src="../core/chrome-icon.png" style="width:35px;height:35px;"></a></td>
+                <td style="padding-top:20px;"><a href="https://www.google.com/chrome/browser/desktop/" target="_blank" style="text-decoration:none;color:#000000; font-size:1.15em;">&nbsp;&nbsp;Download Google Chrome</a></td></tr>
+            <tr>
+                <td style="margin-right:20px;padding-top:20px;padding-bottom:20px;"><a href="https://www.apple.com/safari/" target="_blank" style="text-decoration:none;"><img src="../core/safari-icon.png" style="width:35px;height:35px;"></a></td>
+                <td style="padding-top:20px;padding-bottom:20px;"><a href="https://www.apple.com/safari/" target="_blank" style="text-decoration:none;font-size:1.15em;color:#000000; ">&nbsp;&nbsp;Download Safari</a></td></tr>
+        </table>
+ 
+    
+    <p align="center" style="line-height:150%; width:80%;margin: 0 auto; margin-top:20px;"><a href="#" onclick="forceBrowserLoad()" style="text-decoration:none;color:#000000; ">Continue with existing web browser</a></p>
+  
+    
+    
+<script>
+    function forceBrowserLoad() { 
+        console.log("forceBrowserLoad"); 
+        createCookie("forceBrowser", true, 30);
+        console.log("forceBrowserLoad: Enabled cookie");
+        window.location.href = '../../../index.html'; 
+
+    }
+
+      function createCookie(name, value, days) {
+        var expires;
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        }
+        else {
+            expires = "";
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return false;
+    }
+    console.log("Ready to forceBrowserLoad if required");
+
+</script>
+
+</body>
+</html>
+    
+    
+        
+     
