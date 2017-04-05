@@ -1,5 +1,6 @@
 # teamlist
-Ionic 2 and Heroku Node.js Starter App Example for Ionic Vancouver
+This is a basic Ionic 2 and Node.js Heroku Starter application for demonstration of how to build and run an Ionic 2 app for web, iOS, and Android users at the Ionic Vancouver meetup in April 2017.  This repo includes Node.js server components and Ionic 2 app components. 
+
 
 ## Node.js on Heroku 
 
@@ -10,10 +11,17 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).This applicatio
 ## Starting a new app 
 ionic start app tabs --v2
 ionic serve 
-ionic build --release --prod 
+
+## Building on iOS and Android 
+ionic build ios  
+ionic run android 
 ionic build ios --release --prod 
 ionic build android --release --prod 
-ionic run android 
+
+## Building for Web delivery 
+ionic build --release --prod 
+Copy the ./ionic/www folder to ./www for delivery through Heroku 
+Test with Chrome Incognito to avoid caching 
 
 # Server Operations
 ## Running Locally
@@ -25,7 +33,7 @@ $ npm install
 $ npm start
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## Deploying to Heroku
 
@@ -34,13 +42,17 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Documentation
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
+Additional support resources for Ionic: 
+
+- [Installing Ionic] (https://ionicframework.com/docs/intro/installation/)
+- [Ionic Tutorial] (https://ionicframework.com/docs/intro/tutorial/) 
+- [Ionic Component & API Docs] (https://ionicframework.com/docs/components/#overview)
+- [Josh Morony Tutorials] (https://www.joshmorony.com/beginners-guide-to-getting-started-with-ionic-2/)
+
+Additional support resources for Node.js on Heroku: 
 
 - [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)

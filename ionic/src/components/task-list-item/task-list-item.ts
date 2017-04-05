@@ -1,7 +1,4 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import { NavController} from 'ionic-angular';
-
-
 
 @Component({
   selector: 'task-list-item',
