@@ -30,7 +30,7 @@ $ ionic build --release --prod
 
 
 ## Try the Demo 
-Visit https://teamlistapp.herokuapp.com
+Visit https://teamlistchat.herokuapp.com
 
 # Server Operations
 ## Running Locally
