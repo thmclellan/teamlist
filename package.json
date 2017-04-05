@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "node-ionic-starter",
   "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
+  "description": "Node.js app using Express 4",
   "engines": {
     "node": "5.9.1"
   },
@@ -13,14 +13,6 @@
     "ejs": "2.4.1",
     "express": "4.13.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
+ 
   "license": "MIT"
 }
