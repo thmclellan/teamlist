@@ -5,6 +5,12 @@ Ionic 2 and Heroku Node.js Starter App Example for Ionic Vancouver
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
+# Ionic App Setup 
+
+## Starting a new app 
+ionic start app tabs --v2
+
+# Server Operations
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.

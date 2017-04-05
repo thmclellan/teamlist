@@ -1,5 +1,8 @@
 .idea/
-app/www/
+# todo: Add remote builds on server
+# add below ignore in a team environment
+# we are not ignoring app/www because we want to push it to heroku remote 
+# app/www/
 
 # Logs
 logs

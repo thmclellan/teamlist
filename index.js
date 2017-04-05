@@ -18,6 +18,7 @@ if (fs.existsSync(appStaticPath)) {
     staticPath = appStaticPath;
     console.log("serving from app/www");
 }
+console.log("\nappStaticPath:" + appStaticPath);
 app.use(cors());
 // This is required to avoid permission issues with cross domain function calls
 
