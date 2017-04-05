@@ -6,6 +6,13 @@ This is a basic Ionic 2 and Node.js Heroku Starter application for demonstration
 
 This app was started off using the Ionic 2.3 tabs starter. The repo layout includes both the server and client app components in a single repo for demo purposes. The top-level folder includes Node.js server components, and Ionic app components are contained in /ionic.  
 
+### Prerequisites 
+- Node and NPM https://nodejs.org/en/download/
+- Heroku CLI https://devcenter.heroku.com/articles/heroku-cli/
+- Ionic & Cordova https://ionicframework.com/docs/intro/installation/
+- Android Studio https://developer.android.com/studio/index.html
+- Xcode https://developer.apple.com/download/
+
 ## Step-by-Step Instructions
 
 ### Setup Heroku App  
@@ -45,10 +52,12 @@ $ git push heroku master
 $ heroku open 
 $ cd ionic 
 $ ionic platforms add android 
+$ adb devices 
 $ ionic run android
 $ ionic platforms add ios
 $ ionic run ios 
 ```
+- If 'adb devices' does not show attached Android phone, then 'adb kill-server' and 'adb devices' can be used to restart adb.  
 
 ## Running the Ionic App  
 ```sh
