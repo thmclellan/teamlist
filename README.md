@@ -30,7 +30,7 @@ $ ionic build --release --prod
 
 
 ## Try the Demo 
-Visit https://teamlistapp.herokuapp.com(https://teamlistapp.herokuapp.com)
+Visit https://teamlistapp.herokuapp.com
 
 # Server Operations
 ## Running Locally
@@ -71,4 +71,4 @@ Additional support resources for Node.js on Heroku:
 - [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
 - [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
 
-Created by Tom McLellan at GrowthClick(http://www.growthclick.com) for Ionic Vancouver(https://www.meetup.com/ion-van/)
+Created by Tom McLellan at [GrowthClick](http://www.growthclick.com) for [Ionic Vancouver](https://www.meetup.com/ion-van/)
