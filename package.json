@@ -10,9 +10,14 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7"
   },
- 
   "license": "MIT"
 }
