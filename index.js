@@ -11,8 +11,8 @@ var app = express();
 app.set('port', (process.env.PORT || 3000));
 
 // just do static file serving for now  
-var staticPath = path.join(__dirname, 'public'); // public path
-var staticPath = path.join(__dirname, 'app/www'); // alternate path
+var staticPath = path.join(__dirname, 'www'); // public path
+// var staticPath = path.join(__dirname, 'app/www'); // alternate path for local development testing 
 app.use(express.static(staticPath));
 
 
