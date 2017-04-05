@@ -8,19 +8,43 @@ exports.setTargetId = function (req, res, next, id) {
     next();
 };
 
-exports.create = function (req, res) {
-    // create a new task
+exports.save = function (req, res) {
+    // Save a new task or update ane xisting task
 
-    if (req.body.title) {
-        var newId = tasks.length + 1;
-        var taskBody = {id:newId, title:req.body.title};
-        tasks.push(taskBody);
+    // console.log("Create Task");
+    // console.log(req.body);
+
+    if (req.body.id) {
+        // existing task to be updated
+        var foundTask;
+        for (var x = 0; x < tasks.length; x++) {
+            if (tasks[x].id == req.body.id) foundTask = tasks[x];
+        }
+        if (foundTask) {
+            // lazy approach to grab all fields without any validation
+            foundTask = req.body;
+        }
+        res.json(tasks);
+    } else {
+        // new task to be added
+        if (req.body.title) {
+            var newId = tasks.length + 1;
+            var taskBody = {id:newId, title:req.body.title, dueDate:req.body.dueDate, complete:false, createdAt:new Date()};
+            tasks.push(taskBody);
+            res.json(tasks);
+        } else {
+            console.log("Missing Task Title");
+            res.status(400).send("Missing Task Title");
+        }
     }
+
+
 };
 
-exports.list = function (req, res, callback, errorcallback) {
+exports.list = function (req, res) {
 // list all tasks
 
+    console.log("List Tasks");
     res.json(tasks);
 
 };
@@ -28,6 +52,7 @@ exports.list = function (req, res, callback, errorcallback) {
 exports.delete = function (req, res) {
 // remove a task
 
+    console.log("Delete Task " + req.targetId);
     if (req.targetId) {
         for (var x = 0; x < tasks.length; x++) {
             if (tasks[x].id == req.targetId) {

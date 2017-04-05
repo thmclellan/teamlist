@@ -1,0 +1,9 @@
+.task-list-item-title { 
+//  color:#6060FF; 
+ color:color($colors, primary);
+ font-size:1.1em;
+ margin-bottom:5px; 
+}
+.task-list-item-due-date { 
+    color:#999999; 
+}

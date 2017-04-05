@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     app.route('/api/task')
         .get(controller.list)
-        .post(controller.create);
+        .post(controller.save);
     app.route('/api/task/:targetId')
         .delete(controller.delete);
 

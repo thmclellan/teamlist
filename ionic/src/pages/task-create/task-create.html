@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add a New Task
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="task-create-title">Add new task:</div>
+
+<form (ngSubmit)="createTask()" #createTaskForm="ngForm">
+<ion-list>
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input [(ngModel)]="newTask.title" placeholder="What needs to be done?"  name="taskTitle"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Due Date</ion-label>
+        <ion-datetime class="task-create-due-date-input" displayFormat="DDD DD MMM" pickerFormat="MMM DD, YYYY"
+          [(ngModel)]="newTask.dueDate" name="dueDate"
+          (ionChange)="dateChanged()"
+          dayShortNames="Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+          monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"></ion-datetime>
+  </ion-item>
+ 
+</ion-list>
+<div class="task-create-button-div">
+    <button ion-button round color="primary"  type="submit">Add Task</button>
+</div>
+</form>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Current Tasks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-refresher (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  
+
+  <ion-list>
+
+      <task-list-item *ngFor="let task of tasks" [task]="task"></task-list-item>
+    
+      <!--
+       <p *ngFor="let task of tasks">
+         Task:
+        {{task.title}}
+       </p>-->
+  </ion-list>
+    
+  <p align="center" *ngIf="!(tasks)">
+    No Tasks
+  </p>
+</ion-content>
+    
