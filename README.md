@@ -2,22 +2,35 @@
 ## For Web, iPhone, Android users (Ionic 2, Node.js, Heroku) 
 This is a basic Ionic 2 and Node.js Heroku Starter application for demonstration of how to build and run an Ionic 2 app for web, iOS, and Android users at the Ionic Vancouver meetup in April 2017.  This repo includes Node.js server components and Ionic 2 app components. 
 
-# Ionic App Setup 
+# Project Structure 
 
-## Starting a new app 
-ionic start app tabs --v2
-ionic serve 
+This app was started off using the Ionic 2.3 tabs starter. The repo layout includes both the server and client app components in a single repo for demo purposes. The top-level folder includes Node.js server components, and Ionic app components are contained in /ionic.  
+
+## Running the Ionic App  
+```sh
+$ cd ionic
+$ npm install 
+$ ionic serve 
+```
 
 ## Building on iOS and Android 
-ionic build ios  
-ionic run android 
-ionic build ios --release --prod 
-ionic build android --release --prod 
+```sh
+$ ionic build ios  
+$ ionic run android 
+$ ionic build ios --release --prod 
+$ ionic build android --release --prod 
+```
 
 ## Building for Web delivery 
-ionic build --release --prod 
-Copy the ./ionic/www folder to ./www for delivery through Heroku 
-Test with Chrome Incognito to avoid caching 
+```sh
+$ ionic build --release --prod 
+```
+- Copy the ./ionic/www folder to ./www for delivery through Heroku 
+- Test with Chrome Incognito to avoid caching 
+
+
+## Try the Demo 
+Visit https://teamlistapp.herokuapp.com(https://teamlistapp.herokuapp.com)
 
 # Server Operations
 ## Running Locally
